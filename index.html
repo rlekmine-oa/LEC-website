@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ingénierie Structures – Cabinet Indépendant</title>
+  <meta name="description" content="Diagnostic d'ouvrages, études de conception, AMO. Ingénierie des structures – ponts, passages souterrains, réhabilitations." />
+  <meta name="author" content="Votre Nom" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f172a;          /* slate-900 */
+      --card:#0b1228;        /* darker card */
+      --muted:#94a3b8;       /* slate-400 */
+      --text:#e2e8f0;        /* slate-200 */
+      --accent:#38bdf8;      /* sky-400 */
+      --accent-2:#22d3ee;    /* cyan-400 */
+      --ring: rgba(56,189,248,.45);
+      --radius:16px;
+      --shadow: 0 10px 35px rgba(2,8,23,.45);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,var(--bg),#020617);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.6}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{opacity:.9}
+    .container{max-width:1080px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;backdrop-filter:saturate(180%) blur(10px);background:rgba(2,6,23,.6);border-bottom:1px solid rgba(148,163,184,.12);z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));box-shadow:0 6px 20px var(--ring)}
+    .brand h1{font-size:18px;margin:0;font-weight:700}
+    .nav a{margin-left:18px;color:var(--text);opacity:.8}
+    .nav a:hover{opacity:1}
+    .hero{padding:80px 0}
+    .tag{display:inline-block;padding:6px 12px;border:1px solid rgba(56,189,248,.4);border-radius:999px;color:#a5f3fc;background:rgba(8,145,178,.08)}
+    h2{font-size:34px;line-height:1.2;margin:16px 0 8px}
+    .lead{color:var(--muted);max-width:760px}
+    .cta{display:flex;gap:12px;margin-top:22px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;font-weight:600;border:1px solid rgba(148,163,184,.18);background:#0b1228;box-shadow:var(--shadow)}
+    .btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#071425;border:none}
+    section{padding:56px 0;border-top:1px solid rgba(148,163,184,.12)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:linear-gradient(180deg,#0a1226,#0a1020);border:1px solid rgba(148,163,184,.14);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    .card h3{margin:0 0 6px;font-size:18px}
+    .muted{color:var(--muted)}
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .project{background:radial-gradient(1200px 300px at 0% 0%,rgba(56,189,248,.08),transparent),#0a1020;border:1px solid rgba(148,163,184,.14);border-radius:var(--radius);padding:20px}
+    .project h4{margin:0 0 6px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+    .about .photo{width:100%;height:280px;border-radius:18px;background:linear-gradient(135deg,#334155,#0b1228);border:1px solid rgba(148,163,184,.2)}
+    .footer{padding:40px 0;color:var(--muted);font-size:14px}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;border:1px solid rgba(148,163,184,.18)}
+    form{display:grid;gap:12px}
+    input, textarea{background:#0b1228;border:1px solid rgba(148,163,184,.2);color:var(--text);padding:12px;border-radius:12px;outline:none}
+    input:focus, textarea:focus{border-color:var(--accent);box-shadow:0 0 0 4px var(--ring)}
+    .note{font-size:12px;color:var(--muted)}
+    /* Responsive */
+    @media (max-width: 900px){
+      .cards{grid-template-columns:1fr 1fr}
+      .projects{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+    }
+    @media (max-width: 600px){
+      .cards{grid-template-columns:1fr}
+      .nav a{margin-left:12px}
+      .hero{padding:56px 0}
+      h2{font-size:28px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1>Votre Nom – Ingénierie Structures</h1>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#projets">Références</a>
+        <a href="#a-propos">À propos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <span class="tag">Cabinet d’ingénierie indépendant</span>
+      <h2>Diagnostic d’ouvrages, conception & AMO <br/> pour ponts, passages souterrains et structures métalliques.</h2>
+      <p class="lead">Rigueur, clarté, délais tenus. J’accompagne maîtres d’ouvrage et entreprises sur des missions de diagnostic, d’étude et de suivi de travaux. Spécialités : corrosion, étanchéité, réhabilitation et dynamique des structures.</p>
+      <div class="cta">
+        <a class="btn primary" href="#contact">Demander un devis</a>
+        <a class="btn" href="#projets">Voir des références</a>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <h2>Services</h2>
+        <p class="muted">Interventions typiques. Contrats au forfait ou en régie, selon besoin.</p>
+        <div class="cards">
+          <div class="card">
+            <h3>Diagnostics & inspections</h3>
+            <p class="muted">IQOA, pathologies, relevés. Rapports illustrés, priorisation des travaux et estimations sommaires.</p>
+          </div>
+          <div class="card">
+            <h3>Études de conception</h3>
+            <p class="muted">Réhabilitation, renforcement, étanchéité (SEL, systèmes bitumineux), calculs et plans.</p>
+          </div>
+          <div class="card">
+            <h3>AMO & DCE</h3>
+            <p class="muted">Assistance à maîtrise d’ouvrage, dossiers de consultation, analyse des offres, suivi d’exécution.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projets">
+      <div class="container">
+        <h2>Références récentes</h2>
+        <div class="projects">
+          <article class="project">
+            <h4>Pont du Bas Aulnay – Diagnostic IQOA 2E</h4>
+            <p class="muted">Bipoutre métallique à dalle orthotrope, 18,9 m. Constat de corrosion, absence d’étanchéité, traces de plomb/HAP. Recommandations de travaux et phasage en site sensible (ZNIEFF, réseaux, riverains).</p>
+          </article>
+          <article class="project">
+            <h4>Passage sous voies – Étanchéité intrados SEL</h4>
+            <p class="muted">Étude préliminaire et analyse multicritère. Choix d’un système d’étanchéité liquide depuis l’intrados sous exploitation ferroviaire.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="a-propos" class="about">
+      <div class="container grid-2">
+        <div>
+          <h2>À propos</h2>
+          <p class="muted">Ingénieur structures, expérience en diagnostics d’ouvrages d’art, conception et essais. Interventions agiles avec un réseau d’experts selon la taille des missions. Mobilisable en Île-de-France et Grand Ouest.</p>
+          <ul class="muted">
+            <li class="pill">⇢ Assurance RC Pro & décennale</li>
+            <li class="pill">⇢ Intervention en site contraint (nacelles, accès intérieurs)</li>
+            <li class="pill">⇢ Outils : Robot/SAP2000, Revit, QGIS</li>
+          </ul>
+        </div>
+        <div class="photo" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="muted">Expliquez votre besoin en quelques lignes. Réponse sous 24–48 h ouvrées.</p>
+        <!-- Netlify Forms: activé automatiquement si déployé sur Netlify -->
+        <form name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact" />
+          <label>
+            <span>Nom *</span>
+            <input name="nom" required placeholder="Votre nom" />
+          </label>
+          <label>
+            <span>Email *</span>
+            <input type="email" name="email" required placeholder="vous@exemple.fr" />
+          </label>
+          <label>
+            <span>Message *</span>
+            <textarea name="message" rows="5" required placeholder="Décrivez brièvement votre projet…"></textarea>
+          </label>
+          <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+            <button class="btn primary" type="submit">Envoyer</button>
+            <a class="btn" href="mailto:contact@exemple.fr">Ou m’écrire directement</a>
+          </div>
+          <p class="note">En soumettant, vous acceptez d’être contacté par email. Aucune publicité.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <span>© <span id="year"></span> Votre Nom – SIREN / Mentions légales</span>
+      <span>
+        <a href="#" rel="nofollow">LinkedIn</a>
+        · <a href="#" rel="nofollow">PDF Portfolio</a>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    // Année du footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Scroll doux
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const id=a.getAttribute('href').slice(1);
+        const el=document.getElementById(id);
+        if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'})}
+      })
+    })
+  </script>
+</body>
+</html>
